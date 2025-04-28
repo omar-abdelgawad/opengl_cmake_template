@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 3.0.0)#default
 project(OPENGL_FIRST_TIME VERSION 0.1.0 LANGUAGES C CXX)#default
 
+# for making compile_commands.json for clangd lsp
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 include(CTest)#default
 enable_testing()#default
 
