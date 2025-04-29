@@ -110,14 +110,14 @@ int main(void)
     std::cout << glGetString(GL_VERSION) << std::endl;
 
     float positions[] = {
-        -0.5f, -0.5f,
-        0.5f, -0.5f,
-        0.5f, 0.5f,
-        -0.5f, 0.5f};
+        -0.5f, -0.5f, //Bottom-left
+        0.5f, -0.5f,  //Bottom-right
+        0.5f, 0.5f,   //Top-right
+        -0.5f, 0.5f}; //Top-left
 
     unsigned int indices[] = {
-        0, 1, 2,
-        2, 3, 0};
+        0, 1, 2,   // First triangle (bottom-right)
+        2, 3, 0};  // Second triangle (top-left)
     unsigned int buffer;
     glGenBuffers(1, &buffer);
     glBindBuffer(GL_ARRAY_BUFFER, buffer);
